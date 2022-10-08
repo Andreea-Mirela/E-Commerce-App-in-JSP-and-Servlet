@@ -12,7 +12,7 @@
 		<div class="card w-50 mx-auto my-5">
 		<div class="card-header text-center">Date de conectare</div>
 			<div class="card-body">
-				<form action="" method="post">
+				<form action="user-login" method="post">
 					<div class="form-group">
 						<label>Adresa de e-mail</label> <input type="email"
 							class="form-control" name="login-email"
