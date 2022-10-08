@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nume magazin login </title>
+<title>Nume magazin login</title>
 <%@include file="includes/head.jsp"%>
 </head>
 <body>
