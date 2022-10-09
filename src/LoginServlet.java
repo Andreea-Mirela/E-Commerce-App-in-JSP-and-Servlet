@@ -46,7 +46,6 @@ public class LoginServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 			
-			out.print(email+password);
 		}
 	}
 
