@@ -32,10 +32,10 @@ List<Product> products = pd.getAllProducts();
 					<img class="card-img-top" src="product-images/<%= p.getImage() %>" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title"><%= p.getName() %></h5>
-						<h6 class="price">Pret: $<%= p.getPrice() %></h6>
+						<h6 class="price">Pret: <%= p.getPrice() %> RON</h6>
 						<h6 class="category">Categorie: <%= p.getCategory() %></h6>
 						<div class="mt-3 d-flex justify-content-between">
-						<a href="#" class="btn btn-primary">Adauga</a>
+						<a href="#" class="btn btn-dark">Adauga</a>
 						<a href="#" class="btn btn-primary">Cumpara</a>
 						</div>
 					</div>
