@@ -12,15 +12,18 @@
       <li class="nav-item">
         <a class="nav-link" href="cart.jsp">Cosul de cumparaturi</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="orders.jsp">Comenzile mele</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Deconectare</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.jsp">Conectare</a>
-      </li>
+      <% if(auth != null) { %>
+    	  <li class="nav-item">
+          <a class="nav-link" href="orders.jsp">Comenzile mele</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="log-out">Deconectare</a>
+        </li>
+      <% } else { %>
+    	  <li class="nav-item">
+          <a class="nav-link" href="login.jsp">Conectare</a>
+        </li>
+       <% } %>
     </ul>
   </div>
   </div>
