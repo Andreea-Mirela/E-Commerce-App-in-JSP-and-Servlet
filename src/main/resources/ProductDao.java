@@ -3,6 +3,7 @@ package main.resources;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.*;
 
 public class ProductDao {
@@ -27,7 +28,7 @@ public class ProductDao {
 				row.setId(rs.getInt("id"));
 				row.setName(rs.getString("name"));
 				row.setCategory(rs.getString("category"));
-				row.setPrice(rs.getString("price"));
+				row.setPrice(rs.getDouble("price"));
 				row.setImage(rs.getString("image"));
 				
 				products.add(row);
@@ -36,7 +37,35 @@ public class ProductDao {
 			e.printStackTrace();
 		}
 		return products;
-		
+	}
+	
+	public List<Cart> getCartProducts(ArrayList<Cart> cartList) {
+		 List<Cart> book = new ArrayList<>();
+	        try {
+	            if (cartList.size() > 0) {
+	                for (Cart item : cartList) {
+	                    query = "select * from products where id=?";
+	                    pst = this.con.prepareStatement(query);
+	                    pst.setInt(1, item.getId());
+	                    rs = pst.executeQuery();
+	                    while (rs.next()) {
+	                        Cart row = new Cart();
+	                        row.setId(rs.getInt("id"));
+	                        row.setName(rs.getString("name"));
+	                        row.setCategory(rs.getString("category"));
+	                        row.setPrice(rs.getDouble("price")*item.getQuantity());
+	                        row.setQuantity(item.getQuantity());
+	                        book.add(row);
+	                    }
+
+	                }
+	            }
+
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	            System.out.println(e.getMessage());
+	        }
+	        return book;
 	}
  
 }
