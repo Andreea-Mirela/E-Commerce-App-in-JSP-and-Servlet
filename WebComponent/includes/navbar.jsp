@@ -10,7 +10,7 @@
         <a class="nav-link" href="index.jsp">Pagina principala</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cart.jsp">Cosul de cumparaturi</a>
+        <a class="nav-link" href="cart.jsp">Cosul de cumparaturi<span class="badge badge-danger px-1">${cart_list.size()}</span></a>
       </li>
       <% if(auth != null) { %>
     	  <li class="nav-item">
