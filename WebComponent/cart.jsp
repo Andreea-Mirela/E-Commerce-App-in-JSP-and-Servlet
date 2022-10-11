@@ -42,7 +42,7 @@ font-size:25px;
 	<div class="container">
 		<div class="d-flex py-3">
 			<h3>Cost total: ${ (total>0)?dcf.format(total):0 } RON</h3>
-			<a class="mx-3 btn btn-primary" href="#">Plaseaza comanda</a>
+			<a class="mx-3 btn btn-primary" href="cart-check-out">Plaseaza comanda</a>
 		</div>
 		<table class="table table-light">
 			<thead>
