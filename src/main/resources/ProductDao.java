@@ -16,9 +16,9 @@ public class ProductDao {
 		this.con = con;
 	}
 	
+	//READ
 	public List<Product> getAllProducts() {
 		List<Product> products = new ArrayList<Product>();
-		//READ
 		try {
 			query = "select * from products";
 			pst = this.con.prepareStatement(query);
@@ -39,6 +39,7 @@ public class ProductDao {
 		return products;
 	}
 	
+	//READ
 	 public Product getSingleProduct(int id) {
 		 Product row = null;
 	        try {
