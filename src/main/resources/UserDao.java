@@ -37,6 +37,7 @@ public class UserDao {
 		return user;
 	}
 	
+	//UPDATE
 	public boolean changePassword(String email, String password) {
 		 boolean result = false;
 	        try {
