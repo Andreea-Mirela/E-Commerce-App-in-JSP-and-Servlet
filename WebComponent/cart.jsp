@@ -24,7 +24,7 @@ if(cart_list !=null) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cosul de cumparaturi</title>
+<title>CHIShop</title>
 <%@include file="includes/head.jsp"%>
 <style type="text/css">
 .table tbody td {

@@ -19,7 +19,7 @@ if(cart_list !=null) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nume magazin</title>
+<title>CHIShop</title>
 <%@include file="includes/head.jsp"%>
 </head>
 <body>

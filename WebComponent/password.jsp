@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nume magazin login </title>
+<title>CHIShop</title>
 <%@include file="includes/head.jsp"%>
 </head>
 <body>

@@ -24,7 +24,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Comenzile mele</title>
+<title>CHIShop</title>
 <%@include file="includes/head.jsp" %>
 </head>
 <body>
