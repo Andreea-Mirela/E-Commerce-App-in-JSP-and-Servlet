@@ -22,23 +22,20 @@
 <%@include file="includes/navbar.jsp" %>
 	<div class="container">
 		<div class="card w-50 mx-auto my-5">
-		<div class="card-header text-center">Date de conectare</div>
+		<div class="card-header text-center">Schimba parola</div>
 			<div class="card-body">
-				<form action="user-login" method="post">
-					<div class="form-group">
+				<form action="change-password" method="post">
+				<div class="form-group">
 						<label>Adresa de e-mail</label> <input type="email"
-							class="form-control" name="login-email"
-							placeholder="Introduceti adresa de e-mail" required>
+							class="form-control" name="new-login-email" 
+							placeholder="Introduceti adresa de e-mail pentru care doriti schimbarea parolei" required>
 					</div>
 					<div class="form-group">
-						<label>Parola</label> <input type="password" class="form-control"
-							name="login-password" placeholder="**********" required>
+						<label>Parola noua</label> <input type="password" class="form-control"
+							name="new-password" placeholder="**********" required>
 					</div>
 					<div class="text-center">
-						<button type="submit" class="btn btn-primary">Continua</button>
-					</div>
-					<div class="text-center">
-						<a href="change-password" class="link-primary">Am uitat parola</a>
+						<button type="submit" class="btn btn-primary">Modifica</button>
 					</div>
 				</form>
 			</div>

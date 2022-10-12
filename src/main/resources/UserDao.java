@@ -3,6 +3,7 @@ package main.resources;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDao {
 	private Connection con;
@@ -27,12 +28,27 @@ public class UserDao {
 				user = new User();
 				user.setId(rs.getInt("id"));
 				user.setName(rs.getString("name"));
-				user.setName(rs.getString("email"));
+				user.setEmail(rs.getString("email"));
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.print(e.getMessage());
 		}
 		return user;
+	}
+	
+	public boolean changePassword(String email, String password) {
+		 boolean result = false;
+	        try {
+	            query = "update users set password=? where email=? ";
+	            pst = this.con.prepareStatement(query);
+	            pst.setString(1, password);
+				pst.setString(2, email);
+	            pst.executeUpdate();
+	            result = true;
+	        } catch (SQLException e) {
+	            System.out.println(e.getMessage());
+	        }
+	        return result;
 	}
 }

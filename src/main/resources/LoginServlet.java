@@ -45,6 +45,7 @@ public class LoginServlet extends HttpServlet {
 						
 					} else {
 						out.print("user login failed");
+						response.sendRedirect("password.jsp");
 					}
 				} catch (ClassNotFoundException | SQLException e) {
 					e.printStackTrace();
