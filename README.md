@@ -1,4 +1,4 @@
-Pentru rularea aplicatiei sunt necesare:
+To run the application are required:
 - Java 
 - Eclipse EE IDE
 - MySQL Server
